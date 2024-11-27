@@ -121,8 +121,8 @@ class Login(View):
             request.session['userid'] = obj.id
             if obj.type == 'admin':
                 return redirect('adminhome')
-            elif obj.type == 'user':
-                return render(request, 'userdash.html')
+            elif obj.type == 'doctor':
+                return redirect('doctordash')
             elif obj.type == 'serviceprovider':
                 return render(request, 'serviceproviderdash.html')
             else:
@@ -132,6 +132,10 @@ class Login(View):
             messages.error(request, "invalid username or password")
             return redirect('login')
             
+class Logout(View):
+    def get(self, request):
+        request.session.flush()
+        return redirect('login')
 
     
 class RegisterPharmacist(View):
@@ -190,3 +194,6 @@ class View_patient(View):
         c = Patient_model.objects.all()
         return render(request, 'viewpatient.html', {'s':c})
 
+class Doctordash(View):
+    def get(self, request):
+        return render(request, 'Doctordash.html')

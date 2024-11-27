@@ -26,6 +26,8 @@ urlpatterns = [
     path('viewpost', ViewPost.as_view(), name='viewpost'),
     path('viewprescription', ViewPrescription.as_view(), name='viewprescription'),
     path('adminhome', AdminHome.as_view(), name='adminhome'),
-    path('viewpatient', View_patient.as_view(), name='viewpatient')
+    path('viewpatient', View_patient.as_view(), name='viewpatient'),
+    path('doctordash', Doctordash.as_view(), name='doctordash'),
+    path('logout', Logout.as_view(), name='logout')
 
 ]
