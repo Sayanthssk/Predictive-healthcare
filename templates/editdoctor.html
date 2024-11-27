@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="">FirstName</label>
+        <input type="text" name="Firstname" value="{{doctor.Firstname}}" id=""><br><br>
+        <label for="">LastName</label>
+        <input type="text" name="Lastname" value="{{doctor.Lastname}}" id=""><br><br>
+        <label for="">Phoneno</label>
+        <input type="text" name="Phone" value="{{doctor.Phone}}" id=""><br><br>
+        <label for="">E-mail</label>
+        <input type="email" name="Email" value="{{doctor.Email}}" id=""><br><br>
+        <label for="">Qualification</label>
+        <input type="text" name="Qualification" value="{{doctor.Qualification}}" id=""><br><br>
+        <label for="">Experience</label>
+        <input type="text" name="Year_of_experience" value="{{doctor.Year_of_experience}}" id=""><br><br>
+        <label for="">Department</label>
+        <input type="text" name="Department" value="{{doctor.Department}}" id=""><br><br>
+        <label for="">Username</label>
+        <input type="text" name="username" value="{{doctor.LOGIN_ID.username}}" id=""><br><br> 
+        <button type="submit">Edit</button>
+    </form>
+</body>
+</html>

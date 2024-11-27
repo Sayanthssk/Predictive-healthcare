@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Phonr number</th>
+            <th>Email</th>
+            <th>Qualification</th>
+            <th>Experience</th>
+            <th>Department</th>
+            <th><button><a href="/adddoctor">Add+</a></th></button>
+        </tr>
+        {% for i in s %}
+        <tr>
+            <td>{{ i.id }}</td>
+            <td>{{ i.Firstname }}{{ i.Lastname }}</td>
+            <td>{{ i.Phone }}</td>
+            <td>{{ i.Email }}</td>
+            <td>{{ i.Qualification }}</td>
+            <td>{{ i.Year_of_experience }}</td>
+            <td>{{ i.Department }}</td>
+            <td>{{ i.LOGIN_ID.username }}</td>
+            <td><a href="/editdoctor/{{ i.id }}">Edit</a></td>
+            <td><a href="/deletedoctor/{{ i.id }}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+</body>
+</html>

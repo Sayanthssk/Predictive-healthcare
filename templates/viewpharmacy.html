@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>pharmacy Name</th>
+        </tr>
+        {% for i in s %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.Firstname}} {{i.Lastname}}</td>
+            <td>{{i.Pharmacy_Name}}</td>
+            <td><a href="editpharmacy/{{i.id}}">Edit</a></td>
+            <td><a href="deletepharmacy/{{i.id}}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

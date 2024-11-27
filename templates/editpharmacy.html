@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="">Firt Name</label>
+        <input type="text" name="Firstname" id="" value="{{pharmacy.Firstname}}"><br><br>
+        <label for="">Last Name</label>
+        <input type="text" name="Lastname" id="" value="{{pharmacy.Lastname}}"><br><br>
+        <label for="">Pharmacy Name</label>
+        <input type="text" name="Pharmacy_Name" id="" value="{{pharmacy.Pharmacy_Name}}"><br><br>
+        <label for="">Address</label>
+        <input type="text" name="Address" id="" value="{{pharmacy.Address}}"><br><br>
+        <label for="">Phone No</label>
+        <input type="text" name="Phone" id="" value="{{pharmacy.Phone}}"><br><br>
+        <label for="">E-mail</label>
+        <input type="email" name="Email" id="" value="{{pharmacy.Email}}"><br><br>
+        <label for="">Username</label>
+        <input type="text" name="username" id="" value="{{pharmacy.LOGIN_ID.username}}"><br><br>  
+        <input type="submit" value="Edit">
+    </form>
+</body>
+</html>

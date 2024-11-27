@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="">Medicine name</label>
+        <input type="text" name="Medicine_Name" id="" value="{{medicine.Medicine_Name}}"><br><br>
+        <label for="">Quantity</label>
+        <input type="number" name="Quantity"  style="width: 1.5cm" id="" value="{{medicine.Quantity}}"><br><br>
+        <label for="">Price</label>
+        <input type="number" name="price" id="" value="{{medicine.price}}" ><br><br>
+        <label for="">Description</label>
+        <input type="text" name="Description" id="" value="{{medicine.Description}}"><br><br>
+        <!-- <input type="text" name="Status" id="" value="{{medicine.Status}}"> -->
+        <select name="Status" id="" >
+            <option value="Available" {% if medicine.Status == 'Available' %} selected {% endif %}>Available</option>
+            <option value="Out Of Stock" {% if medicine.Status == 'Out Of Stock' %} selected {% endif %}>Out Of Stock</option>
+        </select>
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>

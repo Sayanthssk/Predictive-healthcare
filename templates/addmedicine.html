@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="">Medicine name</label>
+        <input type="text" name="Medicine_Name" id=""><br><br>
+        <label for="">Quantity</label>
+        <input type="number" name="Quantity"  style="width: 1.5cm" id=""><br><br>
+        <label for="">Price</label>
+        <input type="number" name="price" id=""><br><br>
+        <label for="">Description</label>
+        <input type="text" name="Description" id=""><br><br>
+        <select name="Status" id="">
+            <option value="Available">Available</option>    
+            <option value="Out Of Stock">Out Of Stock</option>
+        </select>
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>
